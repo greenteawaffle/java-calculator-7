@@ -10,13 +10,5 @@ public class StringSeparator {
     // TODO. 두 번 하는 경우 -> 각 rawInput에 대해서 커스텀 구분자를 설정하고, 일반 덧셈식도 설정한다. 하지만 연산을 두 번 해야 한다. -> 이거로 가보자!
     // TODO. BUT!!!!!!! -> 만약 Delimiters와 expressionString을 동시에 저장하는 클래스를 생성한다면? -> 연산을 한 번만 하면서 메소드 하나에 하나의 기능만 집어넣을 수 있다! -> 이름을 뭐로 하지?
     
-    public static 
-    public static List<String> expressionSeparator(String rawString) {
-        StringTokenizer st = new StringTokenizer(rawString, ",:");
-        List<String> result = new ArrayList<>();
-        while (st.hasMoreTokens()) {
-            result.add(st.nextToken());
-        }
-        return result;
-    }
+    // ExpressionSeparator를 만드는 메소드, 커스텀 구분자와 rawExpression을 담는 객체를 만든다.
 }
