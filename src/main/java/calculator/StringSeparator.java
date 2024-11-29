@@ -11,4 +11,18 @@ public class StringSeparator {
     // TODO. BUT!!!!!!! -> 만약 Delimiters와 expressionString을 동시에 저장하는 클래스를 생성한다면? -> 연산을 한 번만 하면서 메소드 하나에 하나의 기능만 집어넣을 수 있다! -> 이름을 뭐로 하지?
     
     // ExpressionSeparator를 만드는 메소드, 커스텀 구분자와 rawExpression을 담는 객체를 만든다.
+
+    public static Delimiters parseDelimiters(String rawInput) {
+        return DelimitersFactory.makeDelimitersInstance(rawInput);
+    }
+
+    public static Expression parseExpression(String rawInput) {
+        if (rawInput.startsWith("//")) {
+            // String[] splittedStrings = rawInput.split("\\n");
+            // return splittedStrings[1];  TODO. split, regex를 사용해보자.
+            // TODO. 생각해보자! 실제 문제를 풀어야 할 때 가장 빠른 구현 방법을 찾아야 한다. 그럼 지금 어떤 자세로 구현 연습에 임해야 하는가?
+            return new Expression(rawInput.substring(5));
+        }
+        return new Expression(rawInput);
+    }
 }
