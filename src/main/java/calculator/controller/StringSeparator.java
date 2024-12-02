@@ -1,5 +1,8 @@
-package calculator;
+package calculator.controller;
 
+import calculator.model.Delimiters;
+import calculator.model.DelimitersFactory;
+import calculator.model.Expression;
 
 public class StringSeparator {
     // TODO. custom 구분자와 덧셈식을 각각 저장하려고 하는데, 연산을 두 번 해야 할까?
@@ -18,7 +21,7 @@ public class StringSeparator {
             // String[] splittedStrings = rawInput.split("\\n");
             // return splittedStrings[1];  TODO. split, regex를 사용해보자.
             // TODO. 생각해보자! 실제 문제를 풀어야 할 때 가장 빠른 구현 방법을 찾아야 한다. 그럼 지금 어떤 자세로 구현 연습에 임해야 하는가?
-            return new Expression(rawInput.substring(6));
+            return new Expression(rawInput.substring(5));
         }
         return new Expression(rawInput);
     }

@@ -1,4 +1,4 @@
-package calculator;
+package calculator.model;
 
 public class Expression {
     private final String expression;

@@ -4,6 +4,9 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.Test;
 
+import calculator.controller.StringSeparator;
+import calculator.model.Delimiters;
+
 public class StringSeparatorTest {
     @Test
     void 커스텀_구분자_정상_분리_테스트() {
