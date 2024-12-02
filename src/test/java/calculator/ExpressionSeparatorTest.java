@@ -13,8 +13,8 @@ public class ExpressionSeparatorTest {
 
     private static Stream<Arguments> defaultDelimiterTestArguments() {
         return Stream.of(
-            Arguments.arguments("1,2:3", List.of("1", "2", "3")),
-            Arguments.arguments("4,5:6", List.of("4", "5", "6"))
+            Arguments.arguments("1,2:3", List.of(1,2,3)),
+            Arguments.arguments("4,5:6", List.of(4,5,6))
         );
     }
 
@@ -22,7 +22,7 @@ public class ExpressionSeparatorTest {
     @MethodSource("defaultDelimiterTestArguments")  // CsvSource() 쓰면 안 돼?
     // TODO. isEqualTo, 주소 비교? 값 비교?
     void 기본_구분자_사용_테스트(String rawExpression, List<String> expectedStrings) {
-        List<String> separatedString = ExpressionSeparator.expressionSeparator(rawExpression, ",:");
+        List<Integer> separatedString = ExpressionSeparator.parseExpression(rawExpression, ",:");
         assertThat(separatedString).isEqualTo(expectedStrings);
     }
 }

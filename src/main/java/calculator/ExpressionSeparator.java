@@ -14,12 +14,12 @@ public class ExpressionSeparator {
         //     this.rawExpression = rawExpression;
         // }
 
-        public static List<String> expressionSeparator(String rawExpression, String delimiters) {
-        StringTokenizer st = new StringTokenizer(rawExpression, delimiters);
-        List<String> result = new ArrayList<>();
-        while (st.hasMoreTokens()) {
-            result.add(st.nextToken());
-        }
-        return result;
+        public static List<Integer> parseExpression(String rawExpression, String delimiters) {
+            StringTokenizer st = new StringTokenizer(rawExpression, delimiters);
+            List<Integer> result = new ArrayList<>();
+            while (st.hasMoreTokens()) {
+                result.add(Integer.parseInt(st.nextToken()));
+            }
+            return result;
     }
 }
